@@ -8,6 +8,7 @@
     "backbone.marionette": "~2.2.1",
     "hoodie": "~1.0.0",
     "open-sans": "~1.1.0",
-    "bourbon": "~4.0.2"
+    "bourbon": "~4.0.2",
+    "normalize.css": "~3.0.2"
   }
 }
