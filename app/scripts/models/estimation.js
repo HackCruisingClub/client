@@ -24,16 +24,28 @@ ABC.Models.Estimation = Backbone.Model.extend({
     var advCaloric  = advantage.caloric(averagespeed, personWeight, timeWithCar);
     var advEcologic = advantage.ecologic(liters, ABC.app.user.get('carType') || 'oil');
 
+    /* jshint camelcase: false */
+
     d.resolve({
 
-      car: {
-        kms:  Math.round(Math.random() * 20, 0),
-        time: timeWithCar,
+      car_kms: {
+        value: Math.round(Math.random() * 20, 0),
+        unit:  'kms'
       },
 
-      bicycle: {
-        kms:  Math.round(Math.random() * 15, 0),
+      car_time: {
+        time: timeWithCar,
+        unit: 'min'
+      },
+
+      bicycle_kms: {
+        value: Math.round(Math.random() * 20, 0),
+        unit:  'kms'
+      },
+
+      bicycle_time: {
         time: timeWithBike,
+        unit: 'min'
       },
 
       caloric: {

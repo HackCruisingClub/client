@@ -42,19 +42,19 @@ ABC.app.module('bike_advantages', function() {
 
     var avgspeedIndex = Math.min(40, Math.max(avgspeed, 7)) - 7;
 
-    return minutes * avgspeedToCoef[avgspeedIndex] * personWeight;
+    return Math.round(minutes * avgspeedToCoef[avgspeedIndex] * personWeight);
 
   };
 
   this.ecologic = function (liters, type) {
 
-    return liters * (type === 'oil' ? 2.28 : 2.6); /* oil =/= diesel */
+    return Math.round(liters * (type === 'oil' ? 2.28 : 2.6)); /* oil =/= diesel */
 
   };
 
   this.points = function (caloric, ecologic) {
 
-    return 5 * (caloric + ecologic) / 2;
+    return Math.round(5 * (caloric + ecologic) / 2);
 
   };
 
