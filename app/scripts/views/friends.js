@@ -19,10 +19,10 @@ ABC.Views.Friends = Backbone.Marionette.View.extend({
           '<img src="http://avatars.io/email/',    user.get('email'),       '" class="profile-picture">',
           '<span class="list-user-name">#',i+1,' ',user.niceName(),         '</span>',
           '<br>',
-          '<span class="list-user-calories">',     user.get('stats').cal,   '</span>',
-          '<span class="list-user-points">',       user.get('points'),      '</span>',
-          '<span class="list-user-money">',        user.get('stats').money, '</span>',
-          '<span class="list-user-co2">',          user.get('stats').kms,   '</span>',
+          '<span class="prop list-user-calories">',user.get('stats').cal,   ' Kcal brûlées</span>',
+          '<span class="prop list-user-points">',  user.get('points'),      ' points gagnés</span>',
+          '<span class="prop list-user-money">',   user.get('stats').money, ' économisés</span>',
+          '<span class="prop list-user-co2">',     user.get('stats').kms,   ' CO2 en moins</span>',
         '</li>'
         ].join('');
     };

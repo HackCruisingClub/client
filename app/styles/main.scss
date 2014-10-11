@@ -45,10 +45,13 @@ body {
   height: 50px;
   border-radius: 45px;
   border: 2px solid white;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 nav{
   #profile{
+    font-size: 0.7em;
     padding: 10px 20px;
     background: $grey-alt;
   }
@@ -92,9 +95,9 @@ nav{
 
 .friend-list img.profile-picture {
   vertical-align: bottom;
-  margin: 5px;
+  margin: 15px;
   float: left;
-  height: 90%;
+  height: 68px;
   width: auto;
 }
 
@@ -110,9 +113,10 @@ nav{
   font-size: 0.6em;
 }
 
-.friend-list li.user span {
-  font-size: 0.6em;
+.friend-list li.user .prop {
+  font-size: 0.33em;
   float: left;
+  width: 35%;
 }
 
 .view-friends {
@@ -129,7 +133,7 @@ nav{
     background: #A7BD49;
   }
   .hellgy-hero button {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 20px;
     background: whitesmoke;
     border: none;
@@ -138,4 +142,35 @@ nav{
     border-radius: 10px;
   }
 }
+
+
+#main .hexagon {
+  width: 100px;
+  height: 55px;
+  background: black;
+  position: relative;
+}
+#main .hexagon:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid black;
+}
+#main .hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid black;
+}
+
 /* */

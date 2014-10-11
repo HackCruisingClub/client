@@ -4,7 +4,7 @@ ABC.App = Backbone.Marionette.Application.extend({
 
   initialize: function () {
 
-    this.hoodie = new Hoodie('http://localhost:6001');
+    this.hoodie = new Hoodie('http://three-arena.com:6001');
 
     /*
     this.user = new ABC.Models.User({
