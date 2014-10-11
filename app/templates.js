@@ -2,9 +2,16 @@ this["JST"] = this["JST"] || {};
 
 this["JST"]["achievements"] = function(obj) {
 obj || (obj = {});
-var __t, __p = '', __e = _.escape;
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
 with (obj) {
-__p += '<div class="view-achievements">\n\n  <div class="hellgy-hero">\n    <h2>Mes throphées</h2>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n  <div class="achievement">\n    <div class="hexagon"></div>\n  </div>\n\n\n\n</div>';
+__p += '<div class="view-achievements">\n\n  <div class="hellgy-hero">\n    <h2>Mes trophées</h2>\n  </div>\n\n  ';
+ _.each(achievements, function(a) { ;
+__p += '\n  <div class="achievement">\n    <div class="hexagon"></div>\n    <span class="achievement-label">' +
+((__t = ( a.name )) == null ? '' : __t) +
+'</span>\n  </div>\n  ';
+ }) ;
+__p += '\n\n</div>';
 
 }
 return __p
@@ -68,7 +75,7 @@ __p += '<nav>\n  <div id="profile">\n    <a data-view="UserProfile">\n      <img
 ((__t = ( user.get('email') )) == null ? '' : __t) +
 '" alt="" class="profile-picture">' +
 ((__t = ( user.niceName() )) == null ? '' : __t) +
-'\n    </a>\n  </div>\n  <ul id="menu-list">\n    <li class="menu-link">\n      <a data-view="Parking">\n        <i class=""></i> Parkings &amp; location\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Dashboard">\n        <i class="icon-iconmonstr-home-3-icon"></i> Dashboard\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Somewhere">\n        <i class="icon-iconmonstr-home-3-icon"></i> Aller à\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Rides">\n        <i class="icon-iconmonstr-map-2-icon"></i> Points d\'intérêts\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Achievements">\n        <i class="icon-iconmonstr-trophy-12-icon"></i> Trophées\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Partners">\n        <i class="icon-iconmonstr-christmas-gift-icon"></i> Réductions\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Friends">\n        <i class="icon-iconmonstr-user-13-icon"></i> Copains\n      </a>\n    </li>\n    <!--\n    <li class="menu-link">\n      <a data-view="Config">\n        <i class="icon-iconmonstr-gear-icon"></i> Paramètres\n      </a>\n    </li>\n    -->\n  </ul>\n</nav>\n';
+'\n    </a>\n  </div>\n  <ul id="menu-list">\n    <li class="menu-link">\n      <a data-view="Dashboard">\n        <i class="icon-iconmonstr-home-3-icon"></i> Dashboard\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Parking">\n        <i class=""></i> Parkings &amp; location\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Dashboard">\n        <i class="icon-iconmonstr-home-3-icon"></i> Dashboard\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Somewhere">\n        <i class="icon-iconmonstr-direction-7-icon"></i> Aller à\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Rides">\n        <i class="icon-iconmonstr-map-2-icon"></i> Points d\'intérêts\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Achievements">\n        <i class="icon-iconmonstr-trophy-12-icon"></i> Trophées\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Partners">\n        <i class="icon-iconmonstr-christmas-gift-icon"></i> Réductions\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Friends">\n        <i class="icon-iconmonstr-user-13-icon"></i> Copains\n      </a>\n    </li>\n    <!--\n    <li class="menu-link">\n      <a data-view="Config">\n        <i class="icon-iconmonstr-gear-icon"></i> Paramètres\n      </a>\n    </li>\n    -->\n  </ul>\n</nav>\n';
 
 }
 return __p
