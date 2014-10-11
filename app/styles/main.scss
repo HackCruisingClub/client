@@ -55,6 +55,7 @@ nav{
       width: 100%;
       padding: 10px 0 10px 20px;
       font-size: rem(35);
+      font-weight: 300;
       @include background(linear-gradient($grey,$grey-gradient-end) left no-repeat);
     }
   }
