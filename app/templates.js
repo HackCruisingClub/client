@@ -86,7 +86,7 @@ this["JST"]["somewhere"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="view-goto">\n\n    <h2>Aller à ..</h2>\n\n    <p>Lorem ipsum</p>\n\n</div>';
+__p += '<div class="view-goto">\n\n    <h2>Aller à ..</h2>\n\n    <input type="text" class="place-search" />\n\n</div>';
 
 }
 return __p
