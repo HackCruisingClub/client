@@ -73,15 +73,56 @@ nav{
 
 .friend-list {
   list-style-type: none;
+  text-align: left;
   padding: 0;
 }
 
 .friend-list img.profile-picture {
   vertical-align: bottom;
-  margin-right: 5px;
+  margin: 5px;
+  float: left;
+  height: 90%;
+  width: auto;
 }
 
 .friend-list li.user {
-  margin: 10px 0;
+  @include clearfix;
+  margin: 0;
+  padding: 5px;
+  background: #007F7F;
+  border-top: 4px solid #00686D;
+}
+
+.friend-list li.user .list-user-name {
+  font-size: 0.6em;
+}
+
+.friend-list li.user span {
+  font-size: 0.6em;
+  float: left;
+}
+
+.view-friends {
+  text-align: center;
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: lighter;
+  }
+  .hellgy-hero {
+    border-top: 4px solid #92B542;
+    background: #A7BD49;
+  }
+  .hellgy-hero button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background: whitesmoke;
+    border: none;
+    box-shadow: 4px 4px #82A238;
+    color: #82A238;
+    border-radius: 10px;
+  }
 }
 /* */

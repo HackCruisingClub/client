@@ -13,12 +13,16 @@ ABC.Views.Friends = Backbone.Marionette.View.extend({
 
   populate: function (friends, topusers) {
 
-    var insert = function (user) {
+    var insert = function (user, i) {
       return [
         '<li class="user">',
-          '<img src="http://avatars.io/email/', user.get('email'), '" class="profile-picture">',
-          '<span class="list-user-name">', user.niceName(), '</span>',
-          '<span class="list-user-points">', user.get('points'), '</span>',
+          '<img src="http://avatars.io/email/',    user.get('email'),       '" class="profile-picture">',
+          '<span class="list-user-name">#',i+1,' ',user.niceName(),         '</span>',
+          '<br>',
+          '<span class="list-user-calories">',     user.get('stats').cal,   '</span>',
+          '<span class="list-user-points">',       user.get('points'),      '</span>',
+          '<span class="list-user-money">',        user.get('stats').money, '</span>',
+          '<span class="list-user-co2">',          user.get('stats').kms,   '</span>',
         '</li>'
         ].join('');
     };

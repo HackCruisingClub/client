@@ -44,7 +44,7 @@ this["JST"]["friends"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="view-friends">\n\n    <h2>Copains</h2>\n\n    <ul class="friend-list">\n    </ul>\n\n</div>';
+__p += '<div class="view-friends">\n\n  <div class="hellgy-hero">\n    <h2>Mes amis</h2>\n    <h3>Voir le classement de cette semaine</h3>\n    <button class="callto-action">Ajouter des amis facebook</button>\n  </div>\n\n  <ul class="friend-list">\n  </ul>\n\n</div>';
 
 }
 return __p
@@ -68,7 +68,7 @@ __p += '<nav>\n  <div id="profile">\n    <a data-view="UserProfile">\n      <img
 ((__t = ( user.get('email') )) == null ? '' : __t) +
 '" alt="" class="profile-picture">' +
 ((__t = ( user.niceName() )) == null ? '' : __t) +
-'\n    </a>\n  </div>\n  <ul id="menu-list">\n    <li class="menu-link">\n      <a data-view="Somewhere">\n        <i class="fa fa-random"></i> Aller à\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Rides">\n        <i class="fa fa-map-marker"></i> Balades\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Achievements">\n        <i class="fa fa-graduation-cap"></i> Trophés\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Partners">\n        <i class="fa fa-money"></i> Réductions\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Friends">\n        <i class="fa fa-users"></i> Coupains\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Config">\n        <i class="fa fa-gears"></i> Paramètres\n      </a>\n    </li>\n  </ul>\n</nav>\n';
+'\n    </a>\n  </div>\n  <ul id="menu-list">\n    <li class="menu-link">\n      <a data-view="Somewhere">\n        <i class="fa fa-random"></i> Aller à\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Rides">\n        <i class="fa fa-map-marker"></i> Balades\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Achievements">\n        <i class="fa fa-graduation-cap"></i> Trophés\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Partners">\n        <i class="fa fa-money"></i> Réductions\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Friends">\n        <i class="fa fa-users"></i> Coupains\n      </a>\n    </li>\n    <!--\n    <li class="menu-link">\n      <a data-view="Config">\n        <i class="fa fa-gears"></i> Paramètres\n      </a>\n    </li>\n    -->\n  </ul>\n</nav>\n';
 
 }
 return __p

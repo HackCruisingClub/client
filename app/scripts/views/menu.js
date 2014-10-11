@@ -23,7 +23,9 @@ ABC.Menu = Backbone.Marionette.View.extend({
 
     var ViewClass = ABC.Views[$(e.target).data('view')];
 
-    ABC.app.layout.show(new ViewClass());
+    if (ViewClass) {
+      ABC.app.layout.show(new ViewClass());
+    }
 
   }
 
