@@ -34,7 +34,7 @@ this["JST"]["estimation"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="estimation">\n\n    <div class="ridelabel">maison<i class="fa fa-chevron-right"></i>bureau</div>\n\n    <div class="bicycle_km">\n        <span class="value"></span><span class="unit"></span>\n    </div>\n\n    <div class="car_time">\n        <i class="fa fa-car"></i>\n        <time class="value">30</time><span class="unit"></span>\n    </div>\n\n    <div class="bicycle_time">\n        <i class="fa fa-bicycle"></i>\n        <time class="value">30</time><span class="unit"></span>\n    </div>\n\n    <div class="advantages">\n\n        <div class="label">à bicyclette</div>\n\n        <div class="caloric">\n            <i class="fa fa-car"></i>\n            <span class="value">-99</span>\n            <label class="unit">Kcal</label>\n        </div>\n        <div class="ecologic">\n            <span class="value">-35g</span>\n            <label class="unit">CO2</label>\n        </div>\n        <div class="points">\n            <span class="value">+23</span>\n            <label class="unit">points</label>\n        </div>\n    </div>\n\n</div>\n';
+__p += '<div class="estimation">\n\n    <div class="ridelabel">maison<i class="fa fa-chevron-right"></i>bureau</div>\n\n    <div class="bicycle_kms">\n        <span class="value"></span><span class="unit"></span>\n    </div>\n\n    <div class="car_time">\n        <i class="fa fa-car"></i>\n        <time class="value"></time><span class="unit"></span>\n    </div>\n\n    <div class="bicycle_time">\n        <i class="fa fa-bicycle"></i>\n        <time class="value"></time><span class="unit"></span>\n    </div>\n\n    <div class="advantages">\n\n        <div class="label">à bicyclette</div>\n\n        <div class="caloric">\n            <i class="fa fa-car"></i>\n            <span class="value"></span>\n            <label class="unit"></label>\n        </div>\n        <div class="ecologic">\n            <span class="value"></span>\n            <label class="unit"></label>\n        </div>\n        <div class="points">\n            <span class="value"></span>\n            <label class="unit"></label>\n        </div>\n    </div>\n\n</div>\n';
 
 }
 return __p
@@ -44,7 +44,7 @@ this["JST"]["friends"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="view-friends">\n\n    <h2>Copains</h2>\n\n    <p>Lorem ipsum</p>\n\n</div>';
+__p += '<div class="view-friends">\n\n    <h2>Copains</h2>\n\n    <ul class="friend-list">\n    </ul>\n\n</div>';
 
 }
 return __p

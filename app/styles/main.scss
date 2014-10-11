@@ -38,15 +38,16 @@ body {
 }
 
 
+.profile-picture{
+  width: 50px;
+  height: 50px;
+  border-radius: 45px;
+  border: 2px solid white;
+}
+
 nav{
   #profile{
     padding: 10px 20px;
-    .profile-picture{
-      width: 50px;
-      height: 50px;
-      border-radius: 45px;
-      border: 2px solid white;
-    }
   }
   #menu-list{
     margin: 0;
@@ -60,3 +61,28 @@ nav{
     }
   }
 }
+
+
+
+/* crado vincent */
+
+.list-user-points {
+  float: right;
+  color: white;
+  font-size: 60%;
+}
+
+.friend-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.friend-list img.profile-picture {
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.friend-list li.user {
+  margin: 10px 0;
+}
+/* */
