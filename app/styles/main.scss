@@ -1,6 +1,6 @@
 // Variables
 $em-base : 16px;
-$off-canvas-width: 300px;
+$off-canvas-width: 81%;
 $susy: (
   columns: 12,
   global-box-sizing: border-box
@@ -24,10 +24,11 @@ $grey-light : rgb(98, 101, 99);
 @import "weather-icons";
 @import "utilities";
 @import "off-canvas";
+@import "menu";
 
 @include border-box-sizing;
 
-html{}
+html{font-size: 62.5%}
 body {
   background: $grey;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
