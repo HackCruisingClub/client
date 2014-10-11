@@ -1,6 +1,16 @@
 // Variables
 $em-base : 16px;
-$off-canvas-width-2: 300px;
+$off-canvas-width: 300px;
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box,
+  debug: (
+    image: show-columns,
+    output: overlay,
+    toggle: bottom left
+  )
+);
+
 
 $lime: rgb(151, 170, 39);
 $lime-alt: rgb(133, 164, 25);
@@ -21,7 +31,7 @@ $grey-light : rgb(98, 101, 99);
 
 
 html{
-
+@include border-box-sizing;
 }
 body {
   background: $grey;
@@ -30,8 +40,19 @@ body {
   font-size: 36px;
 }
 
+
 nav{
+  #profile{
+    padding: 10px 20px;
+    .profile-picture{
+      width: 50px;
+      height: 50px;
+      border-radius: 45px;
+      border: 2px solid white;
+    }
+  }
   #menu-list{
+    margin: 0;
     @extend %inline;
     li{
       width: 100%;
