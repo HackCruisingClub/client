@@ -4,7 +4,7 @@ this["JST"]["achievements"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="view-achievements">\n\n    <h2>Trophés</h2>\n\n    <p>Lorem ipsum</p>\n\n</div>';
+__p += '<div class="view-achievements">\n\n    <h2>Trophés</h2>\n\n    <div class="achievements-estimation"></div>\n\n    <div class="achievements-stats"></div>\n\n</div>';
 
 }
 return __p
@@ -34,7 +34,7 @@ this["JST"]["estimation"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="estimation">\n\n    <div class="label">maison<i class="fa fa-chevron-right"></i>bureau</div>\n\n    <div class="kilometers"></div>\n\n    <div class="by-car">\n        <i class="fa fa-car"></i>\n        <time>30 min</time>\n    </div>\n\n    <div class="by-car">\n        <i class="fa fa-bicycle"></i>\n        <time>18 min</time>\n    </div>\n\n    <div class="bicycle-advantages">\n\n        <div class="label">à bicyclette</div>\n\n        <div class="caloric">\n            <i class="fa fa-car"></i>\n            <span class="value">-99</span>\n            <label class="unit">Kcal</label>\n        </div>\n        <div class="ecologic">\n            <span class="value">-35g</span>\n            <label class="unit">CO2</label>\n        </div>\n        <div class="achievement">\n            <span class="value">+23</span>\n            <label class="unit">points</label>\n        </div>\n    </div>\n\n</div>\n';
+__p += '<div class="estimation">\n\n    <div class="ridelabel">maison<i class="fa fa-chevron-right"></i>bureau</div>\n\n    <div class="kilometers"></div>\n\n    <div class="by-car">\n        <i class="fa fa-car"></i>\n        <time>30 min</time>\n    </div>\n\n    <div class="by-bicycle">\n        <i class="fa fa-bicycle"></i>\n        <time>18 min</time>\n    </div>\n\n    <div class="bicycle-advantages">\n\n        <div class="label">à bicyclette</div>\n\n        <div class="caloric">\n            <i class="fa fa-car"></i>\n            <span class="value">-99</span>\n            <label class="unit">Kcal</label>\n        </div>\n        <div class="ecologic">\n            <span class="value">-35g</span>\n            <label class="unit">CO2</label>\n        </div>\n        <div class="achievement">\n            <span class="value">+23</span>\n            <label class="unit">points</label>\n        </div>\n    </div>\n\n</div>\n';
 
 }
 return __p
@@ -96,7 +96,7 @@ this["JST"]["stats"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="stats">\n\n    <div class="label">depuis <span class="duration">42 jours</span></div>\n\n    <div class="bicycle-advantages">\n        <div class="caloric">\n            <i class="fa fa-heart"></i>\n            <span class="value">-99</span>\n            <label class="unit">Kcal</label>\n        </div>\n        <div class="ecologic">\n            <i class="fa fa-thumbs-up"></i>\n            <span class="value">-35g</span>\n            <label class="unit">CO2</label>\n        </div>\n        <div class="achievement">\n            <i class="fa fa-graduation-cap"></i>\n            <span class="value">+23</span>\n            <label class="unit">points</label>\n        </div>\n    </div>\n\n</div>';
+__p += '<div class="stats">\n\n    <div class="duration">\n        <i class="fa fa-refresh fa-spin"></i>\n    </div>\n\n    <div class="bicycle-advantages">\n        <div class="caloric">\n            <i class="fa fa-heart"></i>\n            <span class="value">\n                <!-- <i class="fa fa-refresh fa-spin"></i> -->\n            </span>\n            <label class="unit"></label>\n        </div>\n        <div class="ecologic">\n            <i class="fa fa-thumbs-up"></i>\n            <span class="value">\n                <!-- <i class="fa fa-refresh fa-spin"></i> -->\n            </span>\n            <label class="unit"></label>\n        </div>\n        <div class="achievement">\n            <i class="fa fa-graduation-cap"></i>\n            <span class="value">\n                <!-- <i class="fa fa-refresh fa-spin"></i> -->\n            </span>\n            <label class="unit"></label>\n        </div>\n    </div>\n\n</div>';
 
 }
 return __p

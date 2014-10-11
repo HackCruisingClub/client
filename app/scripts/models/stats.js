@@ -4,8 +4,8 @@ ABC.Models.Stats = Backbone.Model.extend({
 
   url: ABC.base + '/stats',
 
-  mine: function () {
-      return ABC.hoodie.store.find('stats', 0);
+  fetch: function () {
+      return ABC.app.hoodie.store.find('stats', 0);
   }
 
 });
