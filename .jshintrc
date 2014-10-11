@@ -18,5 +18,5 @@
   "trailing": true,
   "smarttabs": true,
   "jquery": true,
-  "globals": { "ABC":true, "JST":true, "Backbone":true, "Hoodie":true  }
+  "globals": { "_":true, "Backbone":true, "JST":true, "Hoodie":true, "ABC":true  }
 }

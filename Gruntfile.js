@@ -398,10 +398,10 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'jst',
       'wiredep',
       'concurrent:server',
       'autoprefixer',
-      'jst',
       'connect:livereload',
       'watch'
     ]);
