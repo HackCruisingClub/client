@@ -4,7 +4,7 @@ this["JST"]["achievements"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="view-achievements">\n\n    <h2>Trophés</h2>\n\n    <div class="achievements-estimation"></div>\n\n    <div class="achievements-stats"></div>\n\n</div>';
+__p += '<div class="view-achievements">\n\n    <h2>Trophés</h2>\n\n    <div class="achievements-weather"></div>\n\n    <div class="achievements-estimation"></div>\n\n    <div class="achievements-stats"></div>\n\n</div>';
 
 }
 return __p
@@ -64,9 +64,9 @@ this["JST"]["menu"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<nav>  \n  <ul id="menu-list">\n\n      <li class="menu-username">\n          <a data-view="UserProfile">\n              <i class="fa fa-home"></i> ' +
+__p += '<nav>\n  \n  <ul id="menu-list">\n    <li class="menu-username">\n      <a data-view="UserProfile">\n        <i class="fa fa-home"></i> ' +
 ((__t = ( user.niceName() )) == null ? '' : __t) +
-'\n          </a>\n      </li>\n\n      <li class="menu-link">\n          <a data-view="Somewhere">\n              <i class="fa fa-random"></i> Aller à\n          </a>\n      </li>\n\n      <li class="menu-link">\n          <a data-view="Rides">\n              <i class="fa fa-map-marker"></i> Balades\n          </a>\n      </li>\n\n      <li class="menu-link">\n          <a data-view="Achievements">\n              <i class="fa fa-graduation-cap"></i> Trophés\n          </a>\n      </li>\n\n      <li class="menu-link">\n          <a data-view="Partners">\n              <i class="fa fa-money"></i> Réductions\n          </a>\n      </li>\n\n      <li class="menu-link">\n          <a data-view="Friends">\n              <i class="fa fa-users"></i> Coupains\n          </a>\n      </li>\n\n      <li class="menu-link">\n          <a data-view="Config">\n              <i class="fa fa-gears"></i> Paramètres\n          </a>\n      </li>\n\n  </ul>\n</nav>\n';
+'\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Somewhere">\n        <i class="fa fa-random"></i> Aller à\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Rides">\n        <i class="fa fa-map-marker"></i> Balades\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Achievements">\n        <i class="fa fa-graduation-cap"></i> Trophés\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Partners">\n        <i class="fa fa-money"></i> Réductions\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Friends">\n        <i class="fa fa-users"></i> Coupains\n      </a>\n    </li>\n    <li class="menu-link">\n      <a data-view="Config">\n        <i class="fa fa-gears"></i> Paramètres\n      </a>\n    </li>\n  </ul>\n</nav>\n';
 
 }
 return __p

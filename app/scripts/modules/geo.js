@@ -1,10 +1,10 @@
 'use strict';
 
-ABC.app.module('geo', function(){
+ABC.app.module('geo', function() {
 
   var self = this;
 
-  if ('geolocation' in navigator) {
+  if (0 && 'geolocation' in navigator) {
 
     this.currentLocation = function (callback) {
 
@@ -18,7 +18,12 @@ ABC.app.module('geo', function(){
     this.currentLocation = function (callback) {
 
       /* return user's home ? */
-      callback('0,0');
+      callback({
+        coords: {
+          latitude:  '49.1056959',
+          longitude: '6.1921145'
+        }
+      });
 
     };
 
