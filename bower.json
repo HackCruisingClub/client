@@ -9,6 +9,8 @@
     "hoodie": "~1.0.0",
     "open-sans": "~1.1.0",
     "bourbon": "~4.0.2",
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "simpleWeather": "~3.0.2",
+    "moment": "~2.8.3"
   }
 }
