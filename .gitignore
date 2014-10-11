@@ -121,4 +121,4 @@ sftp-config.json
 
 build/
 dist/
-template.js
+app/template.js
