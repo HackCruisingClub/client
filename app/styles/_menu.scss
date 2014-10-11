@@ -1,7 +1,18 @@
 .header-menu{
   background: $grey;
+  position: relative;
   button{
     background: transparent;
     border: none;
+    position: absolute;
+  }
+  h1{
+    font-size: rem(36);
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    span{
+      font-weight: bold;
+    }
   }
 }

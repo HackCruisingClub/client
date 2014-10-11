@@ -18,7 +18,7 @@
 }
 .main {
   @include container;
-  padding-left: gutter();
-  padding-right: gutter();
+  //padding-left: gutter();
+  //padding-right: gutter();
   background: $lime;
 }
