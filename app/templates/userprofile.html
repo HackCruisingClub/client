@@ -1,7 +1,63 @@
 <div class="view-profile">
 
-    <h2>Profil</h2>
+  <h2>Profil</h2> <i class="edit fa fa-edit"></i>
 
-    <p>Lorem ipsum</p>
+  <br>
+
+  <% if (editable) { %>
+
+    <input placeholder="Votre nom" name="name" type="text" value="<%= user.get('name') %>" />
+
+    <br>
+
+    <input placeholder="Votre email" name="email" type="text" value="<%= user.get('email') %>" />
+
+    <br>
+
+    <input placeholder="Votre adresse" name="homeAddress" type="text" value="<%= user.get('homeAddress') %>" />
+
+    <br>
+
+    <input placeholder="L'adresse du boulot" name="workAddress" type="text" value="<%= user.get('workAddress') %>" />
+
+    <br>
+
+    <select class="" name="carType" name="carType">
+
+      <option value="oil" <%= user.get('carType') === 'oil' ? 'selected' : '' %> >Essence</option>
+
+      <option value="diesel" <%= user.get('carType') === 'diesel' ? 'selected' : '' %> >Diesel</option>
+
+    </select>
+
+    <br>
+
+  <% } else { %>
+
+    <label class="name"><%= user.get('name') %></label>
+
+    <br>
+
+    <label class="email"><%= user.get('email') %></label>
+
+    <br>
+
+    <label class="homeAddress"><%= user.get('homeAddress') %></label>
+
+    <br>
+
+    <label class="workAddress"><%= user.get('workAddress') %></label>
+
+    <br>
+
+    <label class="carType"><%= user.niceCarType() %></label>
+
+    <br>
+
+  <% } %>
+
+  <br>
+  <br>
+  <br>
 
 </div>

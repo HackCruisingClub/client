@@ -4,8 +4,9 @@ ABC.App = Backbone.Marionette.Application.extend({
 
   initialize: function () {
 
-    this.hoodie = new Hoodie('http://localhost:6007');
+    this.hoodie = new Hoodie('http://localhost:6001');
 
+    /*
     this.user = new ABC.Models.User({
       name: 'Jean Jacques',
       email: 'jj@genitals.com',
@@ -18,6 +19,9 @@ ABC.App = Backbone.Marionette.Application.extend({
 
       trips: null
     });
+    */
+
+    this.user = new ABC.Models.User();
 
     this.menu = new ABC.Menu({
       el: '#menu'
@@ -32,6 +36,8 @@ ABC.App = Backbone.Marionette.Application.extend({
   render: function () {
 
     this.menu.render();
+
+    this.layout.show(new ABC.Views.Login());
 
   }
 
