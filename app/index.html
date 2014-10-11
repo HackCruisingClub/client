@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>client</title>
+    <title>À bicyclette</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -11,6 +11,8 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="styles/font-awesome.css">
+    <link rel="stylesheet" href="styles/weather-icons.css">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -19,7 +21,11 @@
     <!-- endbuild -->
 
     <script type="text/javascript">
-      var ABC = window.ABC = { Views: {} };
+      var ABC = {
+        base:  'http://localhost',
+        Models: {},
+        Views: {}
+      };
     </script>
 
   </head>
@@ -65,19 +71,32 @@
     <script src="templates.js"></script>
 
     <!-- build:js({app,.tmp}) scripts/{,*/}/*.js -->
+
+    <script src="scripts/app.js"></script>
+
+    <script src="scripts/models/estimation.js"></script>
+    <script src="scripts/models/friends.js"></script>
+    <script src="scripts/models/rides.js"></script>
+    <script src="scripts/models/stats.js"></script>
     <script src="scripts/models/user.js"></script>
+    <script src="scripts/models/weather.js"></script>
 
     <script src="scripts/views/achievements.js"></script>
     <script src="scripts/views/config.js"></script>
     <script src="scripts/views/dashboard.js"></script>
+    <script src="scripts/views/estimation.js"></script>
     <script src="scripts/views/friends.js"></script>
-    <script src="scripts/views/somewhere.js"></script>
     <script src="scripts/views/layout.js"></script>
-    <script src="scripts/views/userprofile.js"></script>
-    <script src="scripts/views/rides.js"></script>
     <script src="scripts/views/menu.js"></script>
+    <script src="scripts/views/rides.js"></script>
+    <script src="scripts/views/somewhere.js"></script>
+    <script src="scripts/views/stats.js"></script>
+    <script src="scripts/views/userprofile.js"></script>
+    <script src="scripts/views/weather.js"></script>
 
     <script src="scripts/main.js"></script>
+
+    <script src="scripts/modules/geo.js"></script>
     <!-- endbuild -->
 </body>
 </html>

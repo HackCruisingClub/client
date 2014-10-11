@@ -1,6 +1,6 @@
 'use strict';
 
-ABC.User = Backbone.Model.extend({
+ABC.Models.User = Backbone.Model.extend({
 
   url: '',
 
