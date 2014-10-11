@@ -3,12 +3,7 @@ $em-base : 16px;
 $off-canvas-width: 300px;
 $susy: (
   columns: 12,
-  global-box-sizing: border-box,
-  debug: (
-    image: show-columns,
-    output: overlay,
-    toggle: bottom left
-  )
+  global-box-sizing: border-box
 );
 
 
@@ -30,10 +25,9 @@ $grey-light : rgb(98, 101, 99);
 @import "utilities";
 @import "off-canvas";
 
-
-html{
 @include border-box-sizing;
-}
+
+html{}
 body {
   background: $grey;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;

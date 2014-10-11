@@ -6,7 +6,8 @@ ABC.Menu = Backbone.Marionette.View.extend({
 
   events: {
 
-    'click [data-view]': 'switchPage'
+    'click [data-view]': 'switchPage',
+    'click .close' : '_close'
 
   },
 
@@ -24,6 +25,16 @@ ABC.Menu = Backbone.Marionette.View.extend({
 
     ABC.app.layout.show(new ViewClass());
 
+  },
+  _open : function(event){
+    console.log('open');
+    event.preventDefault();
+    $('.transformer').toggleClass('is-open');
+  },
+  _close : function(event){
+    console.log('close');
+    event.preventDefault();
+    $('.transformer').removeClass('is-open');
   }
 
 });
