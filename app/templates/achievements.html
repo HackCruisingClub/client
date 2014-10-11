@@ -1,41 +1,14 @@
 <div class="view-achievements">
 
   <div class="hellgy-hero">
-    <h2>Mes throphées</h2>
+    <h2>Mes trophées</h2>
   </div>
 
+  <% _.each(achievements, function(a) { %>
   <div class="achievement">
     <div class="hexagon"></div>
+    <span class="achievement-label"><%= a.name %></span>
   </div>
-
-  <div class="achievement">
-    <div class="hexagon"></div>
-  </div>
-
-  <div class="achievement">
-    <div class="hexagon"></div>
-  </div>
-
-  <div class="achievement">
-    <div class="hexagon"></div>
-  </div>
-
-  <div class="achievement">
-    <div class="hexagon"></div>
-  </div>
-
-  <div class="achievement">
-    <div class="hexagon"></div>
-  </div>
-
-  <div class="achievement">
-    <div class="hexagon"></div>
-  </div>
-
-  <div class="achievement">
-    <div class="hexagon"></div>
-  </div>
-
-
+  <% }) %>
 
 </div>
