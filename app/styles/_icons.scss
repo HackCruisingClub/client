@@ -30,6 +30,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-P:before {
+	content: "\e610";
+}
 .icon-logo:before {
 	content: "\e600";
 }
