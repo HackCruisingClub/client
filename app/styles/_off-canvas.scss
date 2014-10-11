@@ -1,0 +1,23 @@
+.container {
+  overflow: hidden;
+}
+.transformer {
+  @include backface-visibility(hidden);
+  @include perspective(1000);
+  transition: transform 0.3s ease;
+  &.is-open {
+    transform: translate3d($off-canvas-width, 0, 0);
+  }
+}
+.off-canvas {
+  position: absolute;
+  width: $off-canvas-width;
+  left: -$off-canvas-width;
+  top: 0;
+  bottom: 0;
+}
+.main {
+  @include container;
+  padding-left: gutter();
+  padding-right: gutter();
+}
