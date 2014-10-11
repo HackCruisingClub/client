@@ -16,6 +16,7 @@ $turquoise-alt: rgb(41, 184, 183);
 $grey : rgb(99, 101, 100);
 $grey-gradient-end : rgb(89, 91, 90);
 $grey-alt : rgb(51, 52, 55);
+$beige: rgb(188, 187, 187);
 
 // bower:scss
 @import "susy/sass/_susy.scss";
@@ -26,6 +27,7 @@ $grey-alt : rgb(51, 52, 55);
 @import "utilities";
 @import "off-canvas";
 @import "menu";
+@import "icons";
 
 @include border-box-sizing;
 
@@ -48,15 +50,26 @@ body {
 nav{
   #profile{
     padding: 10px 20px;
+    background: $grey-alt;
   }
   #menu-list{
     margin: 0;
     @extend %inline;
     li{
       width: 100%;
-      padding: 10px 0 10px 20px;
+      padding: 20px 0 25px 20px;
       font-size: rem(35);
+      font-weight: 300;
+      position: relative;
+      padding-left: 70px;
       @include background(linear-gradient($grey,$grey-gradient-end) left no-repeat);
+      &:hover{
+        @include background(linear-gradient(rgb(174, 194, 56),$lime) left no-repeat);
+        [class^="icon-"],
+        [class*=" icon-"]{
+          color:white;
+        }
+      }
     }
   }
 }
