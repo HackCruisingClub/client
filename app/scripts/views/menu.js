@@ -7,7 +7,6 @@ ABC.Menu = Backbone.Marionette.View.extend({
   events: {
 
     'click [data-view]': 'switchPage'
-
   },
 
   render: function () {

@@ -1,6 +1,11 @@
 // Variables
 $em-base : 16px;
-$off-canvas-width-2: 300px;
+$off-canvas-width: 81%;
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box
+);
+
 
 $lime: rgb(151, 170, 39);
 $lime-alt: rgb(133, 164, 25);
@@ -18,11 +23,12 @@ $grey-light : rgb(98, 101, 99);
 @import "font-awesome";
 @import "weather-icons";
 @import "utilities";
+@import "off-canvas";
+@import "menu";
 
+@include border-box-sizing;
 
-html{
-
-}
+html{font-size: 62.5%}
 body {
   background: $grey;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -30,8 +36,19 @@ body {
   font-size: 36px;
 }
 
+
 nav{
+  #profile{
+    padding: 10px 20px;
+    .profile-picture{
+      width: 50px;
+      height: 50px;
+      border-radius: 45px;
+      border: 2px solid white;
+    }
+  }
   #menu-list{
+    margin: 0;
     @extend %inline;
     li{
       width: 100%;
