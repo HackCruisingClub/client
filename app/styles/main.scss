@@ -7,14 +7,15 @@ $susy: (
 );
 
 
-$lime: rgb(151, 170, 39);
-$lime-alt: rgb(133, 164, 25);
+$lime: rgb(169, 190, 43);
+$lime-alt: rgb(151, 170, 39);
 $petroleum :  rgb(0, 120, 121);
-$petroleum-alt : rgb(0, 107, 108);
+$petroleum-alt : rgb(0, 104, 105);
 $turquoise : rgb(54, 200, 199);
 $turquoise-alt: rgb(41, 184, 183);
-$grey : rgb(89, 91, 90);
-$grey-light : rgb(98, 101, 99);
+$grey : rgb(99, 101, 100);
+$grey-gradient-end : rgb(89, 91, 90);
+$grey-alt : rgb(51, 52, 55);
 
 // bower:scss
 @import "susy/sass/_susy.scss";
@@ -59,7 +60,8 @@ nav{
     li{
       width: 100%;
       padding: 10px 0 10px 20px;
-      @include background(linear-gradient($grey-light, $grey) left no-repeat);
+      font-size: rem(35);
+      @include background(linear-gradient($grey,$grey-gradient-end) left no-repeat);
     }
   }
 }
