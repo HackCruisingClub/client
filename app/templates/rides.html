@@ -1,7 +1,20 @@
 <div class="view-rides">
 
+  <div class="hellgy-hero">
     <h2>Balades</h2>
+  </div>
 
-    <p>Lorem ipsum</p>
+  <ul class="ride-list">
+    <% _.each(rides, function(r) { %>
+      <li class="ride">
+        <i class="fa fa-<%= r.type %>"></i>
+        <span class="ride-label"><%= r.name %></span>
+        <span class="ride-distance">
+          <% if (r.accessible) { %><i class="fa fa-wheelchair"></i> <% } %>
+          <%= r.distance %> km
+        </span>
+      </li>
+    <% }) %>
+  </ul>
 
 </div>

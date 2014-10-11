@@ -119,7 +119,7 @@ nav{
   width: 35%;
 }
 
-.view-friends, .view-achievements {
+.view-friends, .view-achievements, .view-rides {
   text-align: center;
   h2 {
     font-size: 20px;
@@ -191,6 +191,24 @@ nav{
   margin-left: -52px;
   margin-top: 28px;
   display: inline-block;
+}
+
+.ride-list {
+  list-style-type: none;
+  text-align: left;
+  font-size: 18px;
+  padding-left: 10px;
+  li.ride {
+    margin: 10px 0;
+    padding-bottom: 5px;
+    @include background(linear-gradient(rgb(174, 194, 56),$lime) left no-repeat);
+  }
+  .ride-distance {
+    float: right;
+  }
+  .ride i {
+    width: 25px;
+  }
 }
 
 /* */
