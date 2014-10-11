@@ -1,10 +1,5 @@
-// bower:scss
-@import "susy/sass/_susy.scss";
-// endbower
-@import "font-awesome";
-@import "weather-icons";
-
 // Variables
+$em-base : 16px;
 $off-canvas-width-2: 300px;
 
 $lime: rgb(151, 170, 39);
@@ -14,10 +9,37 @@ $petroleum-alt : rgb(0, 107, 108);
 $turquoise : rgb(54, 200, 199);
 $turquoise-alt: rgb(41, 184, 183);
 $grey : rgb(89, 91, 90);
+$grey-light : rgb(98, 101, 99);
+
+// bower:scss
+@import "susy/sass/_susy.scss";
+@import "bourbon/dist/_bourbon.scss";
+// endbower
+@import "font-awesome";
+@import "weather-icons";
+@import "utilities";
 
 
+html{
+
+}
 body {
   background: $grey;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: white;
+  font-size: 36px;
+}
+
+nav{
+  #menu-list{
+    @extend %inline;
+    li{
+      background-color:  $grey;
+      background: -webkit-linear-gradient(90deg, $grey 0%, $grey-light 100%);
+      background: -moz-linear-gradient(90deg, $grey 0%, $grey-light 100%);
+      background: -o-linear-gradient(90deg, $grey 0%, $grey-light 100%);
+      background: -ms-linear-gradient(90deg, $grey 0%, $grey-light 100%);
+      background: linear-gradient(0deg, $grey 0%, $grey-light 100%);
+    }
+  }
 }
