@@ -1,15 +1,37 @@
 'use strict';
 
-ABC.app.module('myModule', function(){
-    // Private Data And Functions
-    var privateData = 'this is private data';
+ABC.app.module('geo', function(){
 
-    var privateFunction = function(){
-        console.log(privateData);
-    }
+  var self = this;
 
-    this.someFunction = function(){
-        privateFunction();
-        console.log(this.someData);
-    }
+  if ('geolocation' in navigator) {
+
+    this.currentLocation = function (callback) {
+
+      navigator.geolocation.getCurrentPosition(callback);
+
+    };
+
+  } else {
+
+    /* geolocation IS NOT available */
+    this.currentLocation = function (callback) {
+
+      /* return user's home ? */
+      callback('0,0');
+
+    };
+
+  }
+
+  this.currentLocationAsString = function (callback) {
+
+      self.currentLocation(function (position) {
+
+        callback(position.coords.latitude + ',' + position.coords.longitude);
+
+      });
+  };
+
+
 });
