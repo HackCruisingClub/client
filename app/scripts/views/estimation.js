@@ -24,8 +24,8 @@ ABC.Views.Estimation = Backbone.Marionette.View.extend({
 
     _.each(data, function (item, kind) {
 
-      self.$el.find('.by_' + kind + ' .value').html(item.value);
-      self.$el.find('.by_' + kind + ' .unit').html(item.unit);
+      self.$el.find('.' + kind + ' .value').html(item.value);
+      self.$el.find('.' + kind + ' .unit').html(item.unit);
 
     });
 
