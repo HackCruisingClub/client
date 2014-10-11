@@ -216,6 +216,20 @@ module.exports = function (grunt) {
       }
     },
 
+    jst: {
+      compile: {
+        options: {
+          processName: function(filepath) {
+            var path = filepath.split('/');
+            return path[path.length - 1].replace(/\.html/, '');
+          }
+        },
+        files: {
+          '<%= config.app %>/templates.js': ['<%= config.app %>/templates/**/*.html']
+        }
+      }
+    },
+
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
@@ -387,6 +401,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'jst',
       'connect:livereload',
       'watch'
     ]);
@@ -415,6 +430,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
+    'jst',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',

@@ -18,6 +18,10 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+    <script type="text/javascript">
+      var ABC = window.ABC = { Views: {} };
+    </script>
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -25,14 +29,14 @@
     <![endif]-->
 
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-      <li>HTML5 Boilerplate</li>
-      <li>Sass</li>
-      <li>Modernizr</li>
-      </ul>
+    <div id="main">
+
+      <div id="menu">
+
+      </div>
+
+      <div id="layout"></div>
+
     </div>
 
 
@@ -46,6 +50,7 @@
     <script src="bower_components/backbone.marionette/lib/core/backbone.marionette.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="http://127.0.0.1:6001/_api/_files/hoodie.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -57,8 +62,22 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <script src="templates.js"></script>
+
+    <!-- build:js({app,.tmp}) scripts/{,*/}/*.js -->
+    <script src="scripts/models/user.js"></script>
+
+    <script src="scripts/views/achievements.js"></script>
+    <script src="scripts/views/config.js"></script>
+    <script src="scripts/views/dashboard.js"></script>
+    <script src="scripts/views/friends.js"></script>
+    <script src="scripts/views/somewhere.js"></script>
+    <script src="scripts/views/layout.js"></script>
+    <script src="scripts/views/userprofile.js"></script>
+    <script src="scripts/views/rides.js"></script>
+    <script src="scripts/views/menu.js"></script>
+
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
