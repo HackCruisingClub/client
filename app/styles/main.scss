@@ -45,11 +45,6 @@ body {
   border: 2px solid white;
 }
 
-list-user-points {
-  float: right;
-  color: darkkhaki;
-}
-
 nav{
   #profile{
     padding: 10px 20px;
@@ -65,3 +60,28 @@ nav{
     }
   }
 }
+
+
+
+/* crado vincent */
+
+.list-user-points {
+  float: right;
+  color: white;
+  font-size: 60%;
+}
+
+.friend-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.friend-list img.profile-picture {
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.friend-list li.user {
+  margin: 10px 0;
+}
+/* */
