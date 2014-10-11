@@ -5,12 +5,19 @@
     background: transparent;
     border: none;
     position: absolute;
+    top: -7px;
+    left: 10px;
+    .fa{
+      font-size: 23px;
+    }
   }
   h1{
     font-size: rem(36);
     width: 100%;
     text-align: center;
     font-weight: 300;
+    margin: 0;
+    padding: 10px 0;
     span{
       font-weight: bold;
     }
