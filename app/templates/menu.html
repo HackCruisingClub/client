@@ -1,48 +1,48 @@
 <nav>
-  <div id="profile">
+  <div id="profile" >
     <a data-view="UserProfile">
-      <img src="http://avatars.io/email/<%= user.get('email') %>" alt="" class="profile-picture"><%= user.niceName() %>
+      <img src="http://avatars.io/email/<%= user.get('email') %>?size=medium" alt="" class="profile-picture"><%= user.niceName() || 'Anonyme' %>
     </a>
   </div>
   <ul id="menu-list">
-    <li class="menu-link">
-      <a data-view="Dashboard">
+    <li class="menu-link" data-view="Dashboard">
+      <a>
         <i class="icon-iconmonstr-home-3-icon"></i> Dashboard
       </a>
     </li>
-    <li class="menu-link">
-      <a data-view="Parking">
+    <li class="menu-link" data-view="Parking">
+      <a>
         <i class=""></i> Parkings &amp; location
       </a>
     </li>
-    <li class="menu-link">
-      <a data-view="Somewhere">
+    <li class="menu-link" data-view="Somewhere">
+      <a>
         <i class="icon-iconmonstr-direction-7-icon"></i> Aller à
       </a>
     </li>
-    <li class="menu-link">
-      <a data-view="Rides">
+    <li class="menu-link" data-view="Rides">
+      <a>
         <i class="icon-iconmonstr-map-2-icon"></i> Points d'intérêts
       </a>
     </li>
-    <li class="menu-link">
-      <a data-view="Achievements">
+    <li class="menu-link" data-view="Achievements">
+      <a>
         <i class="icon-iconmonstr-trophy-12-icon"></i> Trophées
       </a>
     </li>
-    <li class="menu-link">
-      <a data-view="Partners">
+    <li class="menu-link" data-view="Partners">
+      <a>
         <i class="icon-iconmonstr-christmas-gift-icon"></i> Réductions
       </a>
     </li>
-    <li class="menu-link">
-      <a data-view="Friends">
+    <li class="menu-link" data-view="Friends">
+      <a>
         <i class="icon-iconmonstr-user-13-icon"></i> Copains
       </a>
     </li>
     <!--
-    <li class="menu-link">
-      <a data-view="Config">
+    <li class="menu-link" data-view="Config">
+      <a>
         <i class="icon-iconmonstr-gear-icon"></i> Paramètres
       </a>
     </li>

@@ -1,8 +1,10 @@
 <div class="view-profile">
 
-  <h2>Profil</h2> <i class="edit fa fa-edit"></i>
-
-  <br>
+  <div class="user-hero">
+    <img src="http://avatars.io/email/<%= user.get('email') %>?size=large" class="profile-picture">
+    <i class="edit fa fa-edit"></i>
+    <h2><%= user.niceName() %></h2>
+  </div>
 
   <% if (editable) { %>
 
@@ -22,41 +24,53 @@
 
     <br>
 
-    <select class="" name="carType" name="carType">
-
-      <option value="oil" <%= user.get('carType') === 'oil' ? 'selected' : '' %> >Essence</option>
-
-      <option value="diesel" <%= user.get('carType') === 'diesel' ? 'selected' : '' %> >Diesel</option>
-
-    </select>
-
-    <br>
-
-  <% } else { %>
-
-    <label class="name"><%= user.get('name') %></label>
-
-    <br>
-
-    <label class="email"><%= user.get('email') %></label>
-
-    <br>
-
-    <label class="homeAddress"><%= user.get('homeAddress') %></label>
-
-    <br>
-
-    <label class="workAddress"><%= user.get('workAddress') %></label>
-
-    <br>
-
-    <label class="carType"><%= user.niceCarType() %></label>
-
-    <br>
+    <div class="styled-select">
+      <i class="fa fa-chevron-down" for="carType"></i>
+      <select name="carType" id="carType">
+        <% var t = user.get('carType') %>
+        <option value="oil" <%= t==='oil' ? 'selected' : '' %>>Voiture essence</option>
+        <option value="diesel" <%= t==='diesel' ? 'selected' : '' %>>Voiture diesel</option>
+      </select>
+    </div>
 
   <% } %>
 
-  <br>
+  <div class="hellgy-hero">
+    <h2>depuis 53 jours</h2>
+
+    <br>
+
+    <div class="item">
+      <i class="icon-iconmonstr-favorite-4-icon"></i>
+      <span class="value">2435</span>
+      <span class="unit">Kcal brûlées</span>
+      <span class="fun">(28 bières)</span>
+    </div>
+
+    <div class="item">
+      <i class="icon-co2"></i>
+      <span class="value">724</span>
+      <span class="unit">g C02 en moins</span>
+      <span class="fun">(8 ours blancs)</span>
+    </div>
+
+    <div class="item">
+      <i class="fa fa-euro"></i>
+      <span class="value">242,5</span>
+      <span class="unit">&euro; économisés</span>
+      <span class="fun">(28 burgers)</span>
+    </div>
+
+    <div class="item">
+      <i class="icon-iconmonstr-trophy-12-icon"></i>
+      <span class="value">65477</span>
+      <span class="unit">points gagnés</span>
+      <span class="fun">(12 offres offres)</span>
+    </div>
+
+  </div>
+
+
   <br>
   <br>
 

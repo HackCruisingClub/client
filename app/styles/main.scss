@@ -75,6 +75,13 @@ nav{
         }
       }
     }
+    li.selected {
+      @include background(linear-gradient(rgb(174, 194, 56),$lime) left no-repeat);
+      [class^="icon-"],
+      [class*=" icon-"]{
+        color:white;
+      }
+    }
   }
 }
 
@@ -120,7 +127,7 @@ nav{
   width: 35%;
 }
 
-.view-friends, .view-achievements, .view-rides, .view-dashboard {
+.view-friends, .view-achievements, .view-rides, .view-dashboard, .view-profile {
   text-align: center;
   h2 {
     font-size: 20px;
@@ -131,7 +138,7 @@ nav{
   }
   .hellgy-hero {
     border-top: 4px solid #92B542;
-    background: #A7BD49;
+    @include background(linear-gradient(to top, $lime, $lime-alt) left no-repeat);
   }
   .hellgy-hero button {
     font-size: 18px;
@@ -175,14 +182,10 @@ nav{
 }
 
 
-#main .view-achievements {
-  margin-left: 12px;
-}
-
 #main .achievement {
   zoom: 0.6;
   float: left;
-  margin: 40px 24px;
+  margin: 40px 8px 40px 41px;
   text-align: center;
   width: 25%;
 }
@@ -199,6 +202,7 @@ nav{
   text-align: left;
   font-size: 18px;
   padding-left: 10px;
+  margin-top: 30px;
   li.ride {
     margin: 10px 0;
     padding-bottom: 5px;
@@ -206,6 +210,7 @@ nav{
   }
   .ride-distance {
     float: right;
+    margin-right: 5px;
   }
   .ride i {
     width: 25px;
@@ -249,5 +254,77 @@ i.icon-humidite,  i.icon-wind {
   float: left;
 }
 
+.view-profile {
+  .user-hero {
+    @include background(linear-gradient(to top, $turquoise-alt,$petroleum) left no-repeat);
+    text-align: center;
+    background: $grey-alt;
+    position: relative;
+    .profile-picture {
+      width: 120px;
+      height: auto;
+      margin: 10% 7% 5% 7%;
+      border-radius: 60px;
+    }
+    .edit {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    h2 {
+      font-weight: lighter;
+    }
+  }
+  input {
+    line-height: normal;
+    color: white;
+    width: 100%;
+    margin: 5px 0;
+    background: $petroleum;
+    border: none;
+    padding: 4px 6px;
+    font-size: 0.8em;
+  }
+  h2 {
+    margin: 0;
+    font-weight: lighter;
+  }
+  .item {
+    float: left;
+    width: 24.5%;
+    font-size: 11px;
+    position: relative;
+    padding-top: 38px;
+    i {
+      color: white;
+      left: 30%;
+      top: -25px;
+      font-size: 55px;
+      position: absolute;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+.styled-select {
+  margin-top: 3px;
+  background: $petroleum;
+  i {
+    float: right;
+  }
+  select {
+    background: $petroleum;
+    width: 90%;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    font-size: 0.8em;
+    -webkit-appearance: none;
+  }
+}
 
 /* */

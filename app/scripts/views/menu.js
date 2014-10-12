@@ -19,9 +19,15 @@ ABC.Menu = Backbone.Marionette.View.extend({
 
     e.preventDefault();
 
+    this.$el.find('li').removeClass('selected');
+
+    var item = $(e.target)
+                .closest('[data-view]')
+                .addClass('selected');
+
     $('.transformer').removeClass('is-open');
 
-    var ViewClass = ABC.Views[$(e.target).data('view')];
+    var ViewClass = ABC.Views[item.data('view')];
 
     if (ViewClass) {
       ABC.app.layout.show(new ViewClass());

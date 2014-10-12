@@ -5,11 +5,11 @@ ABC.Models.User = Backbone.Model.extend({
   url: '',
 
   defaults: {
-    name: '',
-    email: '',
+    name:     'Annonyme',
+    email:    '',
     username: '',
-    image: '',
-    points: 0,
+    image:    '',
+    points:   0,
 
     homeAddress: '',
     workAddress: '',
