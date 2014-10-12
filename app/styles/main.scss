@@ -120,7 +120,7 @@ nav{
   width: 35%;
 }
 
-.view-friends {
+.view-friends, .view-achievements, .view-rides, .view-dashboard {
   text-align: center;
   h2 {
     font-size: 20px;
@@ -173,5 +173,81 @@ nav{
   border-right: 50px solid transparent;
   border-top: 25px solid black;
 }
+
+
+#main .view-achievements {
+  margin-left: 12px;
+}
+
+#main .achievement {
+  zoom: 0.6;
+  float: left;
+  margin: 40px 24px;
+  text-align: center;
+  width: 25%;
+}
+
+.achievement span {
+  font-size: 50%;
+  margin-left: -52px;
+  margin-top: 28px;
+  display: inline-block;
+}
+
+.ride-list {
+  list-style-type: none;
+  text-align: left;
+  font-size: 18px;
+  padding-left: 10px;
+  li.ride {
+    margin: 10px 0;
+    padding-bottom: 5px;
+    @include background(linear-gradient(rgb(174, 194, 56),$lime) left no-repeat);
+  }
+  .ride-distance {
+    float: right;
+  }
+  .ride i {
+    width: 25px;
+  }
+}
+
+.dashboard-weather {
+  background: $turquoise-alt;
+}
+.weather .morning,
+.weather .evening {
+  @include background(linear-gradient($turquoise-alt,$petroleum) left no-repeat);
+  float: left;
+  width: 50%;
+  height: 160px;
+}
+.weather i[class^="icon-"] {
+  color: white;
+}
+.weather .label,
+.weather .rain-chances,
+.weather .humidity,
+.weather .wind {
+  font-size: 18px;
+  display: block;
+  padding: 5px;
+  position: relative;
+  color: white;
+}
+.weather .wi.icon {
+  margin: 20px 0;
+}
+.humidity, .wind {
+  margin-right: 0;
+  width: 43%;
+  float: left;
+}
+i.icon-humidite,  i.icon-wind {
+  bottom: 20px;
+  position: static;
+  float: left;
+}
+
 
 /* */
