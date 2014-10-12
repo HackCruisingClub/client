@@ -1,0 +1,162 @@
+<div class="view-park">
+
+    <div class="hellgy-hero">
+        <h2>Parkings</h2>
+    </div>
+
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+    <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            left: 30%;
+            top: 0;
+            bottom: 0;
+            width: 70%;
+        }
+
+        .search-ui {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        #list {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            width: 30%;
+            background: #fff;
+        }
+    </style>
+    <div id='map'></div>
+    <div>
+        <input id='search' placeholder='Enter state code' />
+
+        <div>
+            <a href="javascript:addCircle(1000)">1km</a>
+            <a href="javascript:addCircle(2000)">2km</a>
+            <a href="javascript:addCircle(5000)">5km</a>
+        </div>
+
+        <div id="resultList">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+    <script>
+
+        var currentRadius = 2500;
+        var filterCircle = undefined;
+
+
+        function showMap(err, data) {
+            if (data.lbounds) {
+                map.fitBounds(data.lbounds);
+            } else if (data.latlng) {
+                map.setView([data.latlng[0], data.latlng[1]], 13);
+            }
+            map.setZoom(15);
+        }
+
+        function addCircle(radius) {
+
+            currentRadius = radius;
+            if (filterCircle == undefined) {
+                //add circle around map center
+                filterCircle = L.circle(L.latLng(40, -75), currentRadius, {
+                    opacity: 1,
+                    weight: 1,
+                    fillOpacity: 0.1
+                });//.addTo(map);
+                filterCircle.setLatLng(map.getCenter());
+            }
+
+            updateCircle();
+        }
+
+        function updateCircle() {
+
+            filterCircle.setLatLng(map.getCenter());
+            filterCircle.setRadius(currentRadius);
+
+            //filter with new radius
+            clearList();
+            currentLayer.setFilter(showAirport);
+
+            map.fitBounds(currentLayer.getBounds());
+        }
+
+        function showAirport(feature) {
+
+            bool = map.getCenter().distanceTo(L.latLng(
+                    feature.geometry.coordinates[1],
+                    feature.geometry.coordinates[0])) < currentRadius;
+
+            if (bool) updateList(feature);
+
+            return bool;
+        }
+
+        function clearList() {
+            $('#resultList li').remove();
+        }
+
+        function updateList(feature) {
+
+            label = feature.properties.title;
+
+            dist = map.getCenter().distanceTo(L.latLng(
+                    feature.geometry.coordinates[1],
+                    feature.geometry.coordinates[0]));
+
+            $('#resultList').append('<li>' + Math.ceil(dist) + 'm - ' + label + '</li>');
+        }
+
+        function search() {
+            // get the value of the search input field
+            var searchString = $('#search').val().toLowerCase();
+
+            console.log(searchString);
+
+            clearList();
+            currentLayer.setFilter(nameFilter);
+
+            map.fitBounds(currentLayer.getBounds());
+
+            // here we're simply comparing the 'state' property of each marker
+            // to the search string, seeing whether the former contains the latter.
+            function nameFilter(feature) {
+                bool = (feature.properties.title
+                        .toLowerCase()
+                        .indexOf(searchString) !== -1);
+
+                if (bool) updateList(feature);
+
+                return bool;
+            }
+        }
+
+        L.mapbox.accessToken = 'pk.eyJ1IjoidGhpYmF1bHRtaWxhbiIsImEiOiJ0T3I0MWlNIn0.602NQtPqh9shh2FMYtn2xg';
+        var geocoder = L.mapbox.geocoder('mapbox.places-v1');
+        var map = L.mapbox.map('map', 'thibaultmilan.jo6nhjne');
+        geocoder.query('Metz, France', showMap);
+
+        currentLayer = L.mapbox.featureLayer('thibaultmilan.jo622kog').addTo(map);
+
+        $('#search').keyup(search);
+
+
+    </script>
+</div>
