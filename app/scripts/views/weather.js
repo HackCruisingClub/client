@@ -24,6 +24,10 @@ ABC.Views.Weather = Backbone.Marionette.View.extend({
 
       parent.find('.temperature').html(data.temp + '°');
 
+      parent.find('.humidity').html(data.humidity + '%');
+
+      parent.find('.wind').html(parseInt(data.wind.speed / 1000 * 60, 0) + ' m/s');
+
     });
 
   },
