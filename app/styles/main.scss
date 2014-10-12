@@ -255,6 +255,13 @@ i.icon-humidite,  i.icon-wind {
 }
 
 .view-profile {
+  button.edit {
+    margin: 20px 0;
+    padding: 4px 20px;
+    font-size: 20px;
+    color: white;
+    border-radius: 4px;
+  }
   .user-hero {
     @include background(linear-gradient(to top, $turquoise-alt,$petroleum) left no-repeat);
     text-align: center;
@@ -297,7 +304,7 @@ i.icon-humidite,  i.icon-wind {
     padding-top: 38px;
     i {
       color: white;
-      left: 30%;
+      left: 20%;
       top: -25px;
       font-size: 55px;
       position: absolute;
@@ -324,6 +331,15 @@ i.icon-humidite,  i.icon-wind {
     border-radius: 0;
     font-size: 0.8em;
     -webkit-appearance: none;
+  }
+}
+
+.view-profile .view-achievements {
+  @include clearfix;
+  @include background(linear-gradient(to top, $turquoise-alt,$petroleum) left no-repeat);
+  .hellgy-hero {
+    padding: 15px 0 20px 0;
+    background: transparent;
   }
 }
 

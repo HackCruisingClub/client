@@ -33,7 +33,11 @@
       </select>
     </div>
 
-  <% } %>
+    <br>
+
+    <button class="edit">Enregistrer</button>
+
+  <% } else { %>
 
   <div class="hellgy-hero">
     <h2>depuis 53 jours</h2>
@@ -70,8 +74,41 @@
 
   </div>
 
+  <br>
+  <br>
 
-  <br>
-  <br>
+  <%=
+    JST.achievements({
+      user: user,
+      achievements: [
+        { image: '', name: 'Sous stéroïdes'       },
+        { image: '', name: 'Petites roulettes'    },
+        { image: '', name: 'Cycliste du dimanche' },
+        { image: '', name: 'Night rider'          },
+        { image: '', name: 'Good karma'           },
+        { image: '', name: 'Comme un lundi'       },
+        { image: '', name: 'Le tour de Metz'      },
+        { image: '', name: 'Tri cycles'           },
+        { image: '', name: 'Sous stéroïdes'       },
+        { image: '', name: 'Petites roulettes'    },
+        { image: '', name: 'Cycliste du dimanche' },
+        { image: '', name: 'Night rider'          },
+        { image: '', name: 'Good karma'           },
+        { image: '', name: 'Comme un lundi'       },
+        { image: '', name: 'Le tour de Metz'      },
+        { image: '', name: 'Tri cycles'           },
+        { image: '', name: 'Sous stéroïdes'       },
+        { image: '', name: 'Petites roulettes'    },
+        { image: '', name: 'Cycliste du dimanche' },
+        { image: '', name: 'Night rider'          },
+        { image: '', name: 'Good karma'           },
+        { image: '', name: 'Comme un lundi'       },
+        { image: '', name: 'Le tour de Metz'      },
+        { image: '', name: 'Tri cycles'           },
+      ]
+    })
+  %>
+
+  <% } %>
 
 </div>
